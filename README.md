@@ -59,13 +59,10 @@ sudo nano /usr/share/sddm/themes/simple-sddm/theme.conf  # use any text editor w
 - `HourFormat="hh:mm AP` . Make sure to disable the above of this part
 
 ### 🖼️ Default SDDM background
-- To change the default background, put desired image in the `simple-sddm/Backgrounds/` folder and add the name of the image followed by its extension (`.jpg` or `.png`) in `theme.conf` file.
+- To change the default background, put desired image in the `/usr/share/sddm/themes/simple-sddm/Backgrounds/` folder and add the name of the image followed by its extension (`.jpg` or `.png`) in `theme.conf` file.
 
-- You can also customize it further if you wish in the `theme.conf`
-(blur, form position, etc).
-
-
-
+- You can also customize it further if you wish in the `/usr/share/sddm/themes/simple-sddm/theme.conf`
+(blur, form position, etc)
 
 ## Credits
 - Modified Theme which is based to this [`LINK`](https://github.com/rototrash/tokyo-night-sddm) by [**rototrash**](https://github.com/rototrash)
