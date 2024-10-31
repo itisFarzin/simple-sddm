@@ -10,4 +10,4 @@ Screenshot=preview.png
 MainScript=Main.qml
 ConfigFile=theme.conf
 Theme-Id=tokyo-night-sddm
-
+QtVersion=6
