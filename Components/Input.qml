@@ -44,10 +44,10 @@ Column {
         ComboBox {
 
             id: selectUser
-
-            width: parent.height
-            height: parent.height
+            width: parent.width
+            height: root.font.pointSize * 3
             anchors.left: parent.left
+            anchors.centerIn: parent
 
             property var popkey: config.ForceRightToLeft == "true" ? Qt.Key_Right : Qt.Key_Left
             Keys.onPressed: {
@@ -67,6 +67,7 @@ Column {
             onActivated: {
                 username.text = currentText
             }
+            displayText: ""
 
             delegate: ItemDelegate {
                 width: parent.width
@@ -86,17 +87,20 @@ Column {
             }
 
             indicator: Button {
-                    id: usernameIcon
-                    width: selectUser.height * 0.8
-                    height: parent.height
-                    anchors.left: parent.left
-                    anchors.verticalCenter: parent.verticalCenter
-                    anchors.leftMargin: selectUser.height * 0.125
-                    icon.height: parent.height * 0.25
-                    icon.width: parent.height * 0.25
-                    enabled: false
-                    icon.color: root.palette.text
-                    icon.source: Qt.resolvedUrl("../Assets/User.svgz")
+                id: usernameIcon
+                width: selectUser.height * 0.8
+                height: selectUser.height * 0.8
+                anchors.left: parent.left
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.leftMargin: selectUser.height * 0.125
+                icon.height: height * 0.5
+                icon.width: width * 0.5
+                enabled: false
+                icon.color: root.palette.text
+                icon.source: Qt.resolvedUrl("../Assets/User.svgz")
+                background: Rectangle {
+                    color: "transparent"
+                }
             }
 
             background: Rectangle {
@@ -175,7 +179,6 @@ Column {
                     }
                 }
             ]
-
         }
 
         TextField {
